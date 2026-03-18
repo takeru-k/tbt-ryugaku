@@ -1,0 +1,838 @@
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>留学エージェントTBT</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <header class="c-header">
+      <div class="c-header__inner">
+        <h1 class="c-header__logo">
+          <a href="index.html"
+            ><img src="images/header/logo.png" alt="TBT"
+          /></a>
+        </h1>
+        <button
+          class="p-hamburger js-hamburger"
+          aria-controls="js-nav"
+          aria-expanded="false"
+        >
+          <span class="p-hamburger__line"></span>
+          <span class="p-hamburger__line"></span>
+          <span class="p-hamburger__line"></span>
+        </button>
+
+        <nav class="c-header__nav js-nav u-hidden-mobile">
+          <ul class="c-header__menu">
+            <li class="menu-item"><a href="index.html">ホーム</a></li>
+            <li class="menu-item menu-item-has-children">
+              <a href="#">国から探す</a>
+              <ul class="sub-menu p-menu-grid">
+                <li class="p-menu-grid__item usa">
+                  <a href="country/usa.html">
+                    <span class="p-menu-grid__name">アメリカ</span>
+                  </a>
+                </li>
+
+                <li class="p-menu-grid__item canada">
+                  <a href="country/canada.html">
+                    <span class="p-menu-grid__name">カナダ</span>
+                  </a>
+                </li>
+
+                <li class="p-menu-grid__item uk">
+                  <a href="country/uk.html">
+                    <span class="p-menu-grid__name">イギリス</span>
+                  </a>
+                </li>
+
+                <li class="p-menu-grid__item italy">
+                  <a href="country/italy.html">
+                    <span class="p-menu-grid__name">イタリア</span>
+                  </a>
+                </li>
+
+                <li class="p-menu-grid__item germany">
+                  <a href="country/germany.html">
+                    <span class="p-menu-grid__name">ドイツ</span>
+                  </a>
+                </li>
+
+                <li class="p-menu-grid__item australia">
+                  <a href="country/australia.html">
+                    <span class="p-menu-grid__name">オーストラリア</span>
+                  </a>
+                </li>
+
+                <li class="p-menu-grid__item nz">
+                  <a href="country/nz.html">
+                    <span class="p-menu-grid__name">ニュージーランド</span>
+                  </a>
+                </li>
+
+                <li class="p-menu-grid__item korea">
+                  <a href="country/korea.html">
+                    <span class="p-menu-grid__name">韓国</span>
+                  </a>
+                </li>
+
+                <li class="p-menu-grid__item malaysia">
+                  <a href="country/malaysia.html">
+                    <span class="p-menu-grid__name">マレーシア</span>
+                  </a>
+                </li>
+
+                <li class="p-menu-grid__item uae">
+                  <a href="country/uae.html">
+                    <span class="p-menu-grid__name">UAE</span>
+                  </a>
+                </li>
+              </ul>
+            </li>
+            <li class="menu-item menu-item-has-children">
+              <a href="#">目的から探す</a>
+              <ul class="sub-menu p-menu-grid">
+                <li class="p-menu-grid__item usa">
+                  <a href="purpose/junior-short.html">
+                    <span class="p-menu-grid__name"
+                      >小中高生の短期語学留学</span
+                    >
+                  </a>
+                </li>
+
+                <li class="p-menu-grid__item canada">
+                  <a href="purpose/highschool-regular.html">
+                    <span class="p-menu-grid__name"
+                      >現地の高校への正規留学</span
+                    >
+                  </a>
+                </li>
+
+                <li class="p-menu-grid__item italy">
+                  <a href="purpose/university-short.html">
+                    <span class="p-menu-grid__name">大学生の短期語学留学</span>
+                  </a>
+                </li>
+
+                <li class="p-menu-grid__item uk">
+                  <a href="purpose/college.html">
+                    <span class="p-menu-grid__name">カレッジ（専門）留学</span>
+                  </a>
+                </li>
+
+                <li class="p-menu-grid__item germany">
+                  <a href="purpose/university-regular.html">
+                    <span class="p-menu-grid__name">大学正規留学</span>
+                  </a>
+                </li>
+
+                <li class="p-menu-grid__item australia">
+                  <a href="purpose/grad-school.html">
+                    <span class="p-menu-grid__name">大学院留学</span>
+                  </a>
+                </li>
+
+                <li class="p-menu-grid__item nz">
+                  <a href="purpose/parent-child.html">
+                    <span class="p-menu-grid__name">親子留学</span>
+                  </a>
+                </li>
+
+                <li class="p-menu-grid__item korea">
+                  <a href="purpose/senior.html">
+                    <span class="p-menu-grid__name">シニア留学</span>
+                  </a>
+                </li>
+
+                <li class="p-menu-grid__item malaysia">
+                  <a href="purpose/working-holiday.html">
+                    <span class="p-menu-grid__name">ワーキングホリデー</span>
+                  </a>
+                </li>
+
+                <li class="p-menu-grid__item uae">
+                  <a href="purpose/adult.html">
+                    <span class="p-menu-grid__name">社会人の語学留学</span>
+                  </a>
+                </li>
+              </ul>
+            </li>
+
+            <li class="menu-item"><a href="guide.html">初めての方へ</a></li>
+            <li class="menu-item">
+              <a href="experience-archive.html">留学体験談</a>
+            </li>
+            <li class="menu-item"><a href="company.html">運営会社</a></li>
+            <li class="menu-item"><a href="contact.html">お問い合わせ</a></li>
+          </ul>
+        </nav>
+
+        <div class="c-header__contact u-hidden-mobile">
+          <a href="contact.html" class="c-button">
+            <span class="c-button__text">無料カウンセリング</span>
+            <span class="c-button__icon">
+              <img src="images/common/arrow-circle.svg" alt="" />
+            </span>
+          </a>
+        </div>
+      </div>
+    </header>
+    <main>
+      <section class="p-hero">
+        <div class="p-hero__inner u-container">
+          <div class="p-slideshow">
+            <div class="p-slideshow__wrap">
+              <ul class="p-slideshow__list p-slideshow__list--left">
+                <li class="p-slideshow__item">
+                  <img src="images/slideshow/ball-01.jpg" />
+                </li>
+                <li class="p-slideshow__item">
+                  <img src="images/slideshow/dance-01.jpg" />
+                </li>
+                <li class="p-slideshow__item">
+                  <img src="images/slideshow/futsal-01.jpg" />
+                </li>
+                <li class="p-slideshow__item">
+                  <img src="images/slideshow/dance-02.jpg" />
+                </li>
+                <li class="p-slideshow__item">
+                  <img src="images/slideshow/futsal-02.jpg" />
+                </li>
+                <li class="p-slideshow__item">
+                  <img src="images/slideshow/dance-03.jpg" />
+                </li>
+              </ul>
+            </div>
+            <!-- /.p-slideshow__wrap -->
+          </div>
+          <!-- /.p-slideshow -->
+
+          <div class="p-hero__content">
+            <p class="p-hero__sub-title">
+              <span>#personalized</span><span>#study</span><span>#abroad.</span>
+            </p>
+            <h1 class="p-hero__title">夢を形にする<br />オーダーメイド留学</h1>
+
+            <div class="p-hero__lead">
+              <p>
+                TBTは、一人ひとりの描く未来を誰よりも近くで、きめ細やかに支え続ける留学エージェントです。生活面の細やかな支援から、進学指導、出発前の英会話まで一貫サポート。LINEやZoomで保護者様とも密に連携し、営業時間外も柔軟に対応します。
+              </p>
+            </div>
+            <!-- /.p-hero__lead -->
+
+            <div class="p-hero__awards">
+              <img src="images/top/awards.png" alt="" />
+            </div>
+
+            <div class="p-hero__btn-wrapper">
+              <a href="contact.html" class="c-button">
+                <span class="c-button__text">まずは無料カウンセリング</span>
+                <span class="c-button__icon">
+                  <img src="images/common/arrow-circle.svg" alt="" />
+                </span>
+              </a>
+            </div>
+          </div>
+
+          <div class="p-hero__image">
+            <img
+              src="images/top/hero-pc.png"
+              alt="留学の様子をまとめたイメージ画像"
+            />
+          </div>
+          <div class="p-slideshow">
+            <div class="p-slideshow__wrap">
+              <ul class="p-slideshow__list p-slideshow__list--left">
+                <li class="p-slideshow__item">
+                  <img src="images/slideshow/ball-01.jpg" />
+                </li>
+                <li class="p-slideshow__item">
+                  <img src="images/slideshow/dance-01.jpg" />
+                </li>
+                <li class="p-slideshow__item">
+                  <img src="images/slideshow/futsal-01.jpg" />
+                </li>
+                <li class="p-slideshow__item">
+                  <img src="images/slideshow/dance-02.jpg" />
+                </li>
+                <li class="p-slideshow__item">
+                  <img src="images/slideshow/futsal-02.jpg" />
+                </li>
+                <li class="p-slideshow__item">
+                  <img src="images/slideshow/dance-03.jpg" />
+                </li>
+              </ul>
+            </div>
+            <!-- /.p-slideshow__wrap -->
+          </div>
+          <!-- /.p-slideshow -->
+        </div>
+      </section>
+
+      <section class="l-block l-block--background u-mt0">
+        <div class="l-inner">
+          <div class="c-heading">
+            <span class="c-heading__sub">purpose</span
+            ><!-- /.c-heading__sub -->
+            <h2 class="c-heading__title">目的から探す</h2>
+            <!-- /.c-heading__title -->
+          </div>
+          <!-- /.c-heading -->
+        </div>
+        <!-- /.l-inner -->
+
+        <div class="p-card-list">
+          <h3 class="p-card-list__heading">Kids & Teens</h3>
+          <!-- /.p-card-list__heading -->
+          <div class="p-card-list__inner u-container">
+            <div class="p-card-list__items">
+              <article class="c-card">
+                <a href="purpose/junior-short.html" class="c-card__link">
+                  <div class="c-card__image">
+                    <img
+                      src="images/sample.webp"
+                      alt="短期語学留学（ジュニア）のイメージ"
+                    />
+                  </div>
+                  <div class="c-card__content">
+                    <h3 class="c-card__title">短期語学留学（ジュニア）</h3>
+
+                    <p class="c-card__text">
+                      小学6年生から17歳までの高校生が対象の1週間から3週間の語学留学プランです。
+                    </p>
+                    <div class="c-card__arrow"></div>
+                  </div>
+                </a>
+              </article>
+              <article class="c-card">
+                <a href="purpose/highschool-regular.html" class="c-card__link">
+                  <div class="c-card__image">
+                    <img
+                      src="images/sample.webp"
+                      alt="現地の高校への正規留学のイメージ"
+                    />
+                  </div>
+                  <div class="c-card__content">
+                    <h3 class="c-card__title">現地の高校への正規留学</h3>
+                    <span class="c-card__line"></span>
+                    <p class="c-card__text">
+                      小学6年生から17歳までの高校生が対象の1週間から3週間の語学留学プランです。
+                    </p>
+                    <div class="c-card__arrow"></div>
+                  </div>
+                </a>
+              </article>
+              <article class="c-card">
+                <a href="purpose/parent-child.html" class="c-card__link">
+                  <div class="c-card__image">
+                    <img src="images/sample.webp" alt="親子留学のイメージ" />
+                  </div>
+                  <div class="c-card__content">
+                    <h3 class="c-card__title">親子留学</h3>
+                    <span class="c-card__line"></span>
+                    <p class="c-card__text">
+                      小学6年生から17歳までの高校生が対象の1週間から3週間の語学留学プランです。
+                    </p>
+                    <div class="c-card__arrow"></div>
+                  </div>
+                </a>
+              </article>
+            </div>
+          </div>
+        </div>
+
+        <div class="p-card-list">
+          <h3 class="p-card-list__heading">Academic & Career</h3>
+          <!-- /.p-card-list__heading -->
+          <div class="p-card-list__inner u-container">
+            <div class="p-card-list__items">
+              <article class="c-card">
+                <a href="purpose/university-short.html" class="c-card__link">
+                  <div class="c-card__image">
+                    <img
+                      src="images/sample.webp"
+                      alt="大学生の短期語学留学のイメージ"
+                    />
+                  </div>
+                  <div class="c-card__content">
+                    <h3 class="c-card__title">大学生の短期語学留学</h3>
+
+                    <p class="c-card__text">
+                      小学6年生から17歳までの高校生が対象の1週間から3週間の語学留学プランです。
+                    </p>
+                    <div class="c-card__arrow"></div>
+                  </div>
+                </a>
+              </article>
+              <article class="c-card">
+                <a href="purpose/college.html" class="c-card__link">
+                  <div class="c-card__image">
+                    <img
+                      src="images/sample.webp"
+                      alt="カレッジ（専門）留学のイメージ"
+                    />
+                  </div>
+                  <div class="c-card__content">
+                    <h3 class="c-card__title">カレッジ（専門）留学</h3>
+                    <span class="c-card__line"></span>
+                    <p class="c-card__text">
+                      小学6年生から17歳までの高校生が対象の1週間から3週間の語学留学プランです。
+                    </p>
+                    <div class="c-card__arrow"></div>
+                  </div>
+                </a>
+              </article>
+              <article class="c-card">
+                <a href="purpose/university-regular.html" class="c-card__link">
+                  <div class="c-card__image">
+                    <img src="images/sample.webp" alt="大学留学のイメージ" />
+                  </div>
+                  <div class="c-card__content">
+                    <h3 class="c-card__title">大学正規留学</h3>
+                    <span class="c-card__line"></span>
+                    <p class="c-card__text">
+                      小学6年生から17歳までの高校生が対象の1週間から3週間の語学留学プランです。
+                    </p>
+                    <div class="c-card__arrow"></div>
+                  </div>
+                </a>
+              </article>
+              <article class="c-card">
+                <a href="purpose/grad-school.html" class="c-card__link">
+                  <div class="c-card__image">
+                    <img src="images/sample.webp" alt="大学院留学のイメージ" />
+                  </div>
+                  <div class="c-card__content">
+                    <h3 class="c-card__title">大学院正規留学</h3>
+                    <span class="c-card__line"></span>
+                    <p class="c-card__text">
+                      小学6年生から17歳までの高校生が対象の1週間から3週間の語学留学プランです。
+                    </p>
+                    <div class="c-card__arrow"></div>
+                  </div>
+                </a>
+              </article>
+            </div>
+          </div>
+        </div>
+
+        <div class="p-card-list">
+          <h3 class="p-card-list__heading">Experience & Life</h3>
+          <!-- /.p-card-list__heading -->
+          <div class="p-card-list__inner u-container">
+            <div class="p-card-list__items">
+              <article class="c-card">
+                <a href="purpose/working-holiday.html" class="c-card__link">
+                  <div class="c-card__image">
+                    <img
+                      src="images/sample.webp"
+                      alt="ワーキングホリデーのイメージ"
+                    />
+                  </div>
+                  <div class="c-card__content">
+                    <h3 class="c-card__title">ワーキングホリデー</h3>
+
+                    <p class="c-card__text">
+                      小学6年生から17歳までの高校生が対象の1週間から3週間の語学留学プランです。
+                    </p>
+                    <div class="c-card__arrow"></div>
+                  </div>
+                </a>
+              </article>
+              <article class="c-card">
+                <a href="purpose/adult.html" class="c-card__link">
+                  <div class="c-card__image">
+                    <img
+                      src="images/sample.webp"
+                      alt="社会人の語学留学のイメージ"
+                    />
+                  </div>
+                  <div class="c-card__content">
+                    <h3 class="c-card__title">社会人の語学留学</h3>
+                    <span class="c-card__line"></span>
+                    <p class="c-card__text">
+                      小学6年生から17歳までの高校生が対象の1週間から3週間の語学留学プランです。
+                    </p>
+                    <div class="c-card__arrow"></div>
+                  </div>
+                </a>
+              </article>
+              <article class="c-card">
+                <a href="purpose/senior.html" class="c-card__link">
+                  <div class="c-card__image">
+                    <img src="images/sample.webp" alt="シニア留学のイメージ" />
+                  </div>
+                  <div class="c-card__content">
+                    <h3 class="c-card__title">シニア留学</h3>
+                    <span class="c-card__line"></span>
+                    <p class="c-card__text">
+                      小学6年生から17歳までの高校生が対象の1週間から3週間の語学留学プランです。
+                    </p>
+                    <div class="c-card__arrow"></div>
+                  </div>
+                </a>
+              </article>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- /.l-block l-block--background -->
+
+      <section class="l-block">
+        <div class="l-inner">
+          <div class="c-heading">
+            <span class="c-heading__sub">country</span
+            ><!-- /.c-heading__sub -->
+            <h2 class="c-heading__title">国から探す</h2>
+            <!-- /.c-heading__title -->
+          </div>
+          <!-- /.c-heading -->
+
+          <div class="p-country-list">
+            <div class="p-country-list__inner">
+              <ul class="p-country-list__grid">
+                <li class="p-country-list__item">
+                  <a href="country/usa.html" class="c-flag-item">
+                    <div class="c-flag-item__img">
+                      <img src="images/country/us.png" alt="アメリカの国旗" />
+                    </div>
+                    <p class="c-flag-item__name">アメリカ</p>
+                  </a>
+                </li>
+                <li class="p-country-list__item">
+                  <a href="country/canada.html" class="c-flag-item">
+                    <div class="c-flag-item__img">
+                      <img src="images/country/canada.png" alt="カナダの国旗" />
+                    </div>
+                    <p class="c-flag-item__name">カナダ</p>
+                  </a>
+                </li>
+                <li class="p-country-list__item">
+                  <a href="country/uk.html" class="c-flag-item">
+                    <div class="c-flag-item__img">
+                      <img src="images/country/uk.png" alt="イギリスの国旗" />
+                    </div>
+                    <p class="c-flag-item__name">イギリス</p>
+                  </a>
+                </li>
+                <li class="p-country-list__item">
+                  <a href="country/italy.html" class="c-flag-item">
+                    <div class="c-flag-item__img">
+                      <img
+                        src="images/country/italy.png"
+                        alt="イタリアの国旗"
+                      />
+                    </div>
+                    <p class="c-flag-item__name">イタリア</p>
+                  </a>
+                </li>
+                <li class="p-country-list__item">
+                  <a href="country/germany.html" class="c-flag-item">
+                    <div class="c-flag-item__img">
+                      <img
+                        src="images/country/germany.png"
+                        alt="ドイツの国旗"
+                      />
+                    </div>
+                    <p class="c-flag-item__name">ドイツ</p>
+                  </a>
+                </li>
+                <li class="p-country-list__item">
+                  <a href="country/australia.html" class="c-flag-item">
+                    <div class="c-flag-item__img">
+                      <img
+                        src="images/country/australia.png"
+                        alt="オーストラリアの国旗"
+                      />
+                    </div>
+                    <p class="c-flag-item__name">オーストラリア</p>
+                  </a>
+                </li>
+                <li class="p-country-list__item">
+                  <a href="country/new-zealand.html" class="c-flag-item">
+                    <div class="c-flag-item__img">
+                      <img
+                        src="images/country/new-zealand.png"
+                        alt="ニュージーランドの国旗"
+                      />
+                    </div>
+                    <p class="c-flag-item__name">ニュージーランド</p>
+                  </a>
+                </li>
+                <li class="p-country-list__item">
+                  <a href="country/soouth-korea.html" class="c-flag-item">
+                    <div class="c-flag-item__img">
+                      <img
+                        src="images/country/south-korea.png"
+                        alt="韓国の国旗"
+                      />
+                    </div>
+                    <p class="c-flag-item__name">韓国</p>
+                  </a>
+                </li>
+                <li class="p-country-list__item">
+                  <a href="country/malaysia.html" class="c-flag-item">
+                    <div class="c-flag-item__img">
+                      <img
+                        src="images/country/malaysia.png"
+                        alt="マレーシアの国旗"
+                      />
+                    </div>
+                    <p class="c-flag-item__name">マレーシア</p>
+                  </a>
+                </li>
+                <li class="p-country-list__item">
+                  <a href="country/uae.html" class="c-flag-item">
+                    <div class="c-flag-item__img">
+                      <img src="images/country/uae.png" alt="UAEの国旗" />
+                    </div>
+                    <p class="c-flag-item__name">UAE</p>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <!-- /.l-inner -->
+      </section>
+      <!-- /.l-block -->
+
+      <section class="l-block l-block--background">
+        <div class="l-inner">
+          <div class="c-heading">
+            <span class="c-heading__sub">guide</span
+            ><!-- /.c-heading__sub -->
+            <h2 class="c-heading__title">初めての方へ</h2>
+            <!-- /.c-heading__title -->
+          </div>
+          <!-- /.c-heading -->
+
+          <ul class="p-media-grid">
+            <li class="p-media-grid__item">
+              <a href="guide/flow.html" class="c-media-card">
+                <div class="c-media-card__img">
+                  <img src="images/sample.webp" alt="" />
+                </div>
+                <div class="c-media-card__body">
+                  <h3 class="c-media-card__title">留学の流れ</h3>
+                  <p class="c-media-card__text">
+                    この文章はダミーです。文字の大きさ、量、字間、行間等を確認するために入れています。
+                  </p>
+                </div>
+              </a>
+            </li>
+
+            <li class="p-media-grid__item">
+              <a href="guide/cost.html" class="c-media-card">
+                <div class="c-media-card__img">
+                  <img src="images/sample.webp" alt="" />
+                </div>
+                <div class="c-media-card__body">
+                  <h3 class="c-media-card__title">留学にかかる費用</h3>
+                  <p class="c-media-card__text">
+                    この文章はダミーです。文字の大きさ、量、字間、行間等を確認するために入れています。
+                  </p>
+                </div>
+              </a>
+            </li>
+
+            <li class="p-media-grid__item">
+              <a href="guide/tips.html" class="c-media-card">
+                <div class="c-media-card__img">
+                  <img src="images/sample.webp" alt="" />
+                </div>
+                <div class="c-media-card__body">
+                  <h3 class="c-media-card__title">留学で失敗しないために</h3>
+                  <p class="c-media-card__text">
+                    この文章はダミーです。文字の大きさ、量、字間、行間等を確認するために入れています。
+                  </p>
+                </div>
+              </a>
+            </li>
+
+            <li class="p-media-grid__item">
+              <a href="guide/support.html" class="c-media-card">
+                <div class="c-media-card__img">
+                  <img src="images/sample.webp" alt="" />
+                </div>
+                <div class="c-media-card__body">
+                  <h3 class="c-media-card__title">サポート内容一覧</h3>
+                  <p class="c-media-card__text">
+                    この文章はダミーです。文字の大きさ、量、字間、行間等を確認するために入れています。
+                  </p>
+                </div>
+              </a>
+            </li>
+
+            <li class="p-media-grid__item">
+              <a href="guide/faq.html" class="c-media-card">
+                <div class="c-media-card__img">
+                  <img src="images/sample.webp" alt="" />
+                </div>
+                <div class="c-media-card__body">
+                  <h3 class="c-media-card__title">よくあるご質問</h3>
+                  <p class="c-media-card__text">
+                    この文章はダミーです。文字の大きさ、量、字間、行間等を確認するために入れています。
+                  </p>
+                </div>
+              </a>
+            </li>
+
+            <li class="p-media-grid__item">
+              <a href="guide/feature.html" class="c-media-card">
+                <div class="c-media-card__img">
+                  <img src="images/sample.webp" alt="" />
+                </div>
+                <div class="c-media-card__body">
+                  <h3 class="c-media-card__title">TBTの特徴・提携校一覧</h3>
+                  <p class="c-media-card__text">
+                    この文章はダミーです。文字の大きさ、量、字間、行間等を確認するために入れています。
+                  </p>
+                </div>
+              </a>
+            </li>
+          </ul>
+        </div>
+        <!-- /.l-inner -->
+      </section>
+      <!-- /.l-block -->
+
+      <section class="l-block">
+        <div class="l-inner">
+          <div class="c-heading">
+            <span class="c-heading__sub">experience</span
+            ><!-- /.c-heading__sub -->
+            <h2 class="c-heading__title">留学体験談</h2>
+            <!-- /.c-heading__title -->
+          </div>
+          <!-- /.c-heading -->
+
+          <ul class="p-media-grid">
+            <li class="p-media-grid__item">
+              <a href="experience-single.html" class="c-media-card">
+                <div class="c-media-card__img">
+                  <img src="images/sample.webp" alt="" />
+                </div>
+                <div class="c-media-card__body">
+                  <h3 class="c-media-card__title">タイトル</h3>
+
+                  <ul class="c-tag-list">
+                    <li class="c-tag-list__item">#アメリカ</li>
+                    <li class="c-tag-list__item">#大学留学</li>
+                  </ul>
+                </div>
+              </a>
+            </li>
+            <li class="p-media-grid__item">
+              <a href="experience-single.html" class="c-media-card">
+                <div class="c-media-card__img">
+                  <img src="images/sample.webp" alt="" />
+                </div>
+                <div class="c-media-card__body">
+                  <h3 class="c-media-card__title">タイトル</h3>
+
+                  <ul class="c-tag-list">
+                    <li class="c-tag-list__item">#アメリカ</li>
+                    <li class="c-tag-list__item">#大学留学</li>
+                  </ul>
+                </div>
+              </a>
+            </li>
+            <li class="p-media-grid__item">
+              <a href="experience-single.html" class="c-media-card">
+                <div class="c-media-card__img">
+                  <img src="images/sample.webp" alt="" />
+                </div>
+                <div class="c-media-card__body">
+                  <h3 class="c-media-card__title">タイトル</h3>
+
+                  <ul class="c-tag-list">
+                    <li class="c-tag-list__item">#アメリカ</li>
+                    <li class="c-tag-list__item">#大学留学</li>
+                  </ul>
+                </div>
+              </a>
+            </li>
+          </ul>
+        </div>
+        <!-- /.l-inner -->
+      </section>
+      <!-- /.l-block -->
+
+      <section class="p-cta">
+        <div class="p-cta__inner l-inner">
+          <h2 class="p-cta__title">まずは無料カウンセリングをご利用ください</h2>
+          <div class="p-cta__text">
+            <p>
+              留学の流れから費用のことまで、<br />お気軽にお問い合わせください。
+            </p>
+          </div>
+
+          <div class="p-cta__action">
+            <div class="p-cta__note">
+              <span class="p-cta__lines"></span>
+              <p>\ 全国対応しております /</p>
+            </div>
+            <a href="contact.html" class="c-button">
+              <span class="c-button__text">無料カウンセリング</span>
+              <span class="c-button__icon">
+                <img src="images/common/arrow-circle.svg" alt="" />
+              </span>
+            </a>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer class="l-footer">
+      <div class="l-inner">
+        <div class="l-footer__head">
+          <div class="l-footer__logo">留学エージェント TBT</div>
+
+          <address class="l-footer__address">
+            <span
+              >〒025-0092<br />
+              岩手県花巻市大通り１丁目３−５<br />花巻市ビジネスインキュベータ1階</span
+            >
+
+            <!-- <span class="l-footer__tel">
+              tel. <a href="tel:0120-501-764">0120-501-764</a>
+            </span> -->
+          </address>
+        </div>
+
+        <div class="l-footer__bottom">
+          <nav class="l-footer__nav">
+            <ul>
+              <li><a href="privacy-policy.html">個人情報保護方針</a></li>
+              <li>
+                <a href="https://three-blue-trees.com/" target="_blank"
+                  >運営会社</a
+                >
+              </li>
+              <li><a href="contact.html">お問い合わせ</a></li>
+            </ul>
+          </nav>
+
+          <small class="l-footer__copy">&copy; Three Blue Trees, inc.</small>
+        </div>
+      </div>
+    </footer>
+    <script
+      src="https://code.jquery.com/jquery-4.0.0.min.js"
+      integrity="sha256-OaVG6prZf4v69dPg6PhVattBXkcOWQB62pdZ3ORyrao="
+      crossorigin="anonymous"
+    ></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>
