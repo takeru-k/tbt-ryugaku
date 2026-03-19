@@ -122,10 +122,10 @@ li {
 -------------------------*/
 
 :root {
-  --color-main: #18589c;
+  --color-main: #061da0;
   --color-sub: #a9876d;
   --color-accent: #660d1f;
-  --color-bg: #f9f9f9;
+  --color-bg: #f8fcff;
   --color-text: #424242;
   --color-text-sub: #8a8e94;
   --color-border: #ececec;
@@ -136,9 +136,15 @@ li {
     #0886d9 60%,
     #a8e063 120%
   );
+  --linear-gradient: linear-gradient(
+    135deg,
+    #7ee8fa 0%,
+    #0886d9 70%,
+    #a8e063 140%
+  );
   --font-base:
     "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", メイリオ, Meiryo, "arial";
-  --font-english: "Montserrat", sans-serif;
+  --font-english: "Raleway", sans-serif;
 }
 
 :where(html) {
@@ -272,6 +278,19 @@ li {
   transform: translateX(4px);
 }
 
+.c-button--gradation {
+  background: linear-gradient(135deg, #7ee8fa 0%, #0886d9 40%, #a8e063 200%);
+  color: #fff;
+  border: 1px solid #fff;
+}
+
+@media (min-width: 1024px) {
+  .c-button__icon img {
+    width: 28px;
+    height: 28px;
+  }
+}
+
 /* ==============================================
    heading
    ============================================== */
@@ -282,18 +301,27 @@ li {
 
 .c-heading__sub {
   font-family: var(--font-english);
-  color: var(--color-main);
   text-transform: uppercase;
-  font-size: clamp(1.75rem, 1.477rem + 1.36vw, 2.5rem);
-  letter-spacing: 1px;
+  font-size: clamp(2rem, 1.455rem + 2.73vw, 3.5rem);
+  letter-spacing: 2px;
+  background-image: var(--gradient);
+  background-size: 300% 200%;
+  background-position: 100% 100%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
 }
 
 .c-heading__title {
-  color: var(--color-text-sub);
-  font-size: clamp(1rem, 0.955rem + 0.23vw, 1.125rem) /* 16-18px */;
-  font-weight: normal;
-  margin-top: 4px;
-  letter-spacing: 0.1em;
+  font-size: clamp(1.125rem, 1.08rem + 0.23vw, 1.25rem);
+  letter-spacing: 2px;
+  padding-left: 2px;
+}
+
+@media (min-width: 1024px) {
+  .c-heading__title {
+    padding-left: 4px;
+  }
 }
 
 .c-section__heading {
@@ -303,10 +331,28 @@ li {
 .c-section-title {
   font-size: clamp(1.5rem, 1.318rem + 0.91vw, 2rem);
   margin-top: 8px;
+  padding-bottom: 16px;
+  position: relative;
+}
+
+.c-section-title::after {
+  position: absolute;
+  content: "";
+  width: 80px;
+  height: 3px;
+  background: var(--color-text);
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 .c-section-title__sub {
-  color: #1a179c;
+  background-image: var(--gradient);
+  background-size: 300% 200%;
+  background-position: 100% 100%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
   display: block;
   font-family: var(--font-english);
   text-transform: uppercase;
@@ -324,6 +370,15 @@ li {
 
   .c-section__heading.-pcLeft {
     text-align: left;
+  }
+
+  .c-section-title {
+    padding-bottom: 24px;
+  }
+
+  .c-section__heading.-pcLeft .c-section-title::after {
+    left: 0;
+    transform: none;
   }
 }
 
@@ -791,7 +846,6 @@ li {
 
 .p-hero__sub-title {
   font-family: var(--font-en);
-  color: var(--color-main);
   font-weight: bold;
   margin-bottom: 10px;
   background-image: var(--gradient);
@@ -806,7 +860,7 @@ li {
 
 .p-hero__title {
   font-size: 38px;
-  line-height: 1.5;
+  line-height: 1.4;
   font-weight: bold;
   background-image: var(--gradient);
   background-size: 200% auto;
@@ -819,7 +873,7 @@ li {
 .p-hero__lead {
   margin-top: 16px;
   font-weight: bold;
-  font-size: 18px;
+  font-size: clamp(1rem, 0.955rem + 0.23vw, 1.125rem) /* 16-18px */;
   text-align: justify;
 }
 
@@ -867,7 +921,7 @@ li {
   }
 
   .p-hero__lead {
-    margin-top: 32px;
+    margin-top: 20px;
   }
 
   .p-hero__image {
@@ -947,6 +1001,7 @@ li {
   font-size: clamp(1.125rem, 1.08rem + 0.23vw, 1.25rem);
   padding-left: 32px;
   margin-left: 6%;
+  font-family: "Raleway", sans-serif;
 }
 
 .p-card-list__heading::before {
@@ -1077,6 +1132,7 @@ li {
   font-weight: bold;
   position: relative;
   padding-bottom: 20px;
+  letter-spacing: 1px;
 }
 
 .c-card__title::after {
@@ -1092,6 +1148,7 @@ li {
 
 .c-card__text {
   font-size: 14px;
+  letter-spacing: 1px;
 }
 
 .c-card__arrow {
@@ -1118,12 +1175,23 @@ li {
 }
 
 @media (hover: hover) {
+  .c-card__content {
+    padding: 12px 32px 28px;
+    gap: 4px;
+  }
+
   .c-card__title {
     font-size: 22px;
   }
+
+  .c-card__text {
+    font-size: 15px;
+  }
+
   .c-card:hover .c-card__image img {
     transform: scale(1.1);
   }
+
   .c-card:hover .c-card__image::after {
     background-color: rgba(0, 0, 0, 0.2);
   }
@@ -1309,10 +1377,9 @@ li {
 }
 
 .p-cta__title {
-  font-size: clamp(1.75rem, 1.477rem + 1.36vw, 2.5rem);
+  font-size: clamp(1.75rem, 1.432rem + 1.59vw, 2.625rem);
   font-weight: bold;
   margin-bottom: 24px;
-  margin-top: 20px;
   letter-spacing: 0.1em;
   font-weight: bold;
   margin-bottom: 10px;
@@ -1326,11 +1393,16 @@ li {
 
 .p-cta__text {
   display: grid;
+  row-gap: 16px;
+  text-align: left;
 }
 
 .p-cta__text p {
   font-size: clamp(1rem, 0.955rem + 0.23vw, 1.125rem) /* 16-18px */;
-  font-weight: bold;
+}
+
+.p-cta__text p br {
+  display: none;
 }
 
 .p-cta__action {
@@ -1347,22 +1419,23 @@ li {
 
 @media (min-width: 1024px) {
   .p-cta {
-    padding: 80px 20px 100px;
+    padding: 80px 0;
   }
 
   .p-cta__title {
-    font-size: 36px;
     margin-bottom: 30px;
   }
 
-  .p-cta__emphasize > span::before {
-    width: 8px;
-    height: 8px;
-    top: -16px;
+  .p-cta__title br {
+    display: none;
+  }
+
+  .p-cta__text {
+    text-align: center;
   }
 
   .p-cta__text p br {
-    display: none;
+    display: block;
   }
 
   .p-cta__action {
@@ -1476,7 +1549,12 @@ li {
   align-items: center;
   gap: 10px;
   font-size: clamp(0.875rem, 0.83rem + 0.23vw, 1rem) /* 14-16px */;
-  color: var(--color-main);
+  background-image: var(--gradient);
+  background-size: 300% 200%;
+  background-position: 100% 100%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
   font-family: var(--font-en);
   margin-bottom: 10px;
 }
@@ -1485,7 +1563,7 @@ li {
   content: "";
   width: 15px;
   height: 2px;
-  background-color: var(--color-main);
+  background: #62bdeb;
 }
 
 .p-page-header__main-title {
@@ -1640,7 +1718,10 @@ li {
 
 .p-media-item__label {
   display: inline-block;
-  color: var(--color-main);
+  border-radius: 8px;
+  color: #fff;
+  padding: 2px 16px;
+  background: var(--linear-gradient);
   font-family: var(--font-english);
   font-weight: bold;
   font-size: 14px;
@@ -1654,6 +1735,7 @@ li {
   font-weight: bold;
   margin: 0 0 20px;
   line-height: 1.4;
+  padding-top: 8px;
 }
 
 .p-media-item__text {
