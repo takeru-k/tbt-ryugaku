@@ -6,6 +6,8 @@
 
     <title>留学エージェントTBT</title>
 
+    <meta name="description" content="TBTは、一人ひとりに寄り添うオーダーメイド留学をサポートするエージェントです。小中高生の短期留学から大学正規留学・ワーキングホリデーまで幅広く対応。岩手県花巻市発の全国対応。" />
+
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -18,11 +20,11 @@
   <body>
     <header class="c-header">
       <div class="c-header__inner">
-        <h1 class="c-header__logo">
+        <p class="c-header__logo">
           <a href="index.html"
             ><img src="images/header/logo.png" alt="TBT"
           /></a>
-        </h1>
+        </p>
         <button
           class="p-hamburger js-hamburger"
           aria-controls="js-nav"
@@ -33,7 +35,7 @@
           <span class="p-hamburger__line"></span>
         </button>
 
-        <nav class="c-header__nav js-nav u-hidden-mobile">
+        <nav class="c-header__nav js-nav u-hidden-mobile" id="js-nav">
           <ul class="c-header__menu">
             <li class="menu-item"><a href="index.html">ホーム</a></li>
             <li class="menu-item menu-item-has-children">
@@ -197,13 +199,13 @@
             <div class="p-slideshow__wrap">
               <ul class="p-slideshow__list p-slideshow__list--left">
                 <li class="p-slideshow__item">
-                  <img src="images/slideshow/slide01.jpg" />
+                  <img src="images/slideshow/slide01.jpg" alt="" />
                 </li>
                 <li class="p-slideshow__item">
-                  <img src="images/slideshow/slide02.jpg" />
+                  <img src="images/slideshow/slide02.jpg" alt="" />
                 </li>
                 <li class="p-slideshow__item">
-                  <img src="images/slideshow/slide03.jpg" />
+                  <img src="images/slideshow/slide03.jpg" alt="" />
                 </li>
               </ul>
             </div>
@@ -248,13 +250,13 @@
             <div class="p-slideshow__wrap">
               <ul class="p-slideshow__list p-slideshow__list--left">
                 <li class="p-slideshow__item">
-                  <img src="images/slideshow/slide01.jpg" />
+                  <img src="images/slideshow/slide01.jpg" alt="" />
                 </li>
                 <li class="p-slideshow__item">
-                  <img src="images/slideshow/slide02.jpg" />
+                  <img src="images/slideshow/slide02.jpg" alt="" />
                 </li>
                 <li class="p-slideshow__item">
-                  <img src="images/slideshow/slide03.jpg" />
+                  <img src="images/slideshow/slide03.jpg" alt="" />
                 </li>
               </ul>
             </div>
@@ -555,7 +557,7 @@
                   </a>
                 </li>
                 <li class="p-country-list__item">
-                  <a href="country/soouth-korea.html" class="c-flag-item">
+                  <a href="country/south-korea.html" class="c-flag-item">
                     <div class="c-flag-item__img">
                       <img
                         src="images/country/south-korea.png"
@@ -802,7 +804,7 @@
             <ul>
               <li><a href="privacy-policy.html">個人情報保護方針</a></li>
               <li>
-                <a href="https://three-blue-trees.com/" target="_blank"
+                <a href="https://three-blue-trees.com/" target="_blank" rel="noopener noreferrer"
                   >運営会社</a
                 >
               </li>
@@ -814,11 +816,6 @@
         </div>
       </div>
     </footer>
-    <script
-      src="https://code.jquery.com/jquery-4.0.0.min.js"
-      integrity="sha256-OaVG6prZf4v69dPg6PhVattBXkcOWQB62pdZ3ORyrao="
-      crossorigin="anonymous"
-    ></script>
     <script src="js/main.js"></script>
   </body>
 </html>

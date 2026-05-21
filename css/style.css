@@ -277,7 +277,6 @@ li {
 
 .c-button__icon img {
   width: 24px;
-  height: 24px;
   height: auto;
   display: block;
   object-fit: cover;
@@ -601,13 +600,15 @@ li {
    sub-menu
    ============================================== */
 .menu-item-has-children .sub-menu {
-  display: none;
+  display: grid;
+  height: 0;
+  overflow: hidden;
+  visibility: hidden;
+  transition: height 0.3s ease, visibility 0.3s ease;
 }
 
 .menu-item-has-children.is-open > .sub-menu {
-  display: grid;
-  grid-template-rows: 1fr;
-  opacity: 1;
+  visibility: visible;
 }
 
 .sub-menu > ul {
@@ -661,6 +662,7 @@ li {
     height: auto;
     visibility: visible;
     overflow: visible;
+    transition: none;
     position: absolute;
     top: 150%;
     left: 200%;
@@ -1038,7 +1040,6 @@ li {
   scroll-snap-type: x mandatory;
   padding: 0 0 20px 20px;
   gap: 15px;
-  -webkit-overflow-scrolling: touch;
   margin-top: 20px;
 }
 
@@ -1394,10 +1395,8 @@ li {
 .p-cta__title {
   font-size: clamp(1.75rem, 1.432rem + 1.59vw, 2.625rem);
   font-weight: bold;
-  margin-bottom: 24px;
-  letter-spacing: 0.1em;
-  font-weight: bold;
   margin-bottom: 10px;
+  letter-spacing: 0.1em;
   background-image: var(--gradient);
   background-size: 300% 300%;
   background-position: 100% 100%;
@@ -1833,9 +1832,6 @@ li {
   transition: opacity 0.3s;
 }
 
-.p-support-list__link {
-}
-
 .p-support-list__index {
   flex-shrink: 0;
   width: 40px;
@@ -2014,13 +2010,10 @@ li {
    ============================================== */
 
 .c-accordion {
-  margin: 40px auto 0;
-  max-width: 880px;
-}
-
-.c-accordion {
   display: grid;
   row-gap: 20px;
+  margin: 40px auto 0;
+  max-width: 880px;
 }
 
 .c-accordion__item {
