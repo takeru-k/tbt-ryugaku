@@ -2013,6 +2013,15 @@ li {
   color: var(--color-link);
 }
 
+.p-step-flow__text span {
+  display: block;
+  font-size: 14px;
+  margin-top: 8px;
+  color: #666;
+  padding-left: 1em;
+  text-indent: -1em;
+}
+
 @media (min-width: 1024px) {
   .p-step-flow {
     display: flex;
@@ -2161,13 +2170,13 @@ li {
   text-decoration: underline;
 }
 
-.c-accordion__notes {
-  list-style: none;
-  padding: 0;
-  margin: 15px 0 0 0;
-  font-size: 12px;
+.c-accordion__text span {
+  display: block;
+  font-size: 14px;
+  margin-top: 8px;
   color: #666;
-  line-height: 1.6;
+  padding-left: 1em;
+  text-indent: -1em;
 }
 
 @media (min-width: 768px) {
