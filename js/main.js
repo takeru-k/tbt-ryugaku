@@ -101,62 +101,79 @@ document.addEventListener("DOMContentLoaded", function () {
     if (list) wrap.appendChild(list.cloneNode(true));
   });
 
-  // アコーディオン
-  document.querySelectorAll(".c-accordion__item").forEach((item, index) => {
-    const trigger = item.querySelector(".js-accordion-trigger");
-    const content = item.querySelector(".js-accordion-content");
-    if (!trigger || !content) return;
+  // p-card-list の横スクロール用バー（iOS Safariは::-webkit-scrollbar非対応のため自前で描画）
+  document.querySelectorAll(".js-card-list-scrollbar").forEach((bar) => {
+    const items = bar
+      .closest(".p-card-list")
+      ?.querySelector(".p-card-list__items");
+    const thumb = bar.querySelector(".p-card-list__scrollbar-thumb");
+    if (!items || !thumb) return;
 
-    const id = `accordion-content-${index}`;
-    trigger.setAttribute("aria-controls", id);
-    content.setAttribute("id", id);
+    const update = () => {
+      const scrollable = items.scrollWidth - items.clientWidth;
+      const thumbWidthRatio = items.clientWidth / items.scrollWidth;
+      const progress = scrollable > 0 ? items.scrollLeft / scrollable : 0;
 
-    if (trigger.getAttribute("aria-expanded") === "true") {
-      trigger.classList.add("is-active");
-      content.classList.add("is-open");
-      content.style.height = "auto";
-    }
+      thumb.style.width = `${thumbWidthRatio * 100}%`;
+      thumb.style.transform = `translateX(${
+        progress * (bar.clientWidth - thumb.offsetWidth)
+      }px)`;
+    };
 
-    trigger.addEventListener("click", () => {
-      const isOpen = trigger.classList.contains("is-active");
+    items.addEventListener("scroll", update, { passive: true });
+    window.addEventListener("resize", update);
+    update();
+  });
 
-      if (isOpen) {
-        content.style.height = content.scrollHeight + "px";
-        requestAnimationFrame(() => {
-          requestAnimationFrame(() => {
-            content.style.height = "0";
-            trigger.classList.remove("is-active");
-            trigger.setAttribute("aria-expanded", "false");
-            content.setAttribute("aria-hidden", "true");
-            content.classList.remove("is-open");
-          });
+  // お知らせのカテゴリー絞り込み
+  document.querySelectorAll(".js-news-filter-list").forEach((filterList) => {
+    const section = filterList.closest(".p-news");
+    if (!section) return;
+
+    const buttons = filterList.querySelectorAll(".js-news-filter-btn");
+    const items = section.querySelectorAll(".js-news-item");
+
+    buttons.forEach((button) => {
+      button.addEventListener("click", () => {
+        buttons.forEach((b) => b.classList.remove("is-active"));
+        button.classList.add("is-active");
+
+        const target = button.dataset.newsFilter;
+        items.forEach((item) => {
+          const match = target === "all" || item.dataset.newsCategory === target;
+          item.classList.toggle("is-hidden", !match);
         });
-      } else {
-        trigger.classList.add("is-active");
-        trigger.setAttribute("aria-expanded", "true");
-        content.classList.add("is-open");
-        content.setAttribute("aria-hidden", "false");
-        content.style.height = "0px";
-        requestAnimationFrame(() => {
-          content.style.height = content.scrollHeight + "px";
+      });
+    });
+  });
+
+  // 提携校の国・地域絞り込み
+  document.querySelectorAll(".js-school-filter-list").forEach((filterList) => {
+    const container = filterList.closest(".p-school-list");
+    if (!container) return;
+
+    const buttons = filterList.querySelectorAll(".js-school-filter-btn");
+    const regions = container.querySelectorAll(".js-school-region");
+
+    buttons.forEach((button) => {
+      button.addEventListener("click", () => {
+        buttons.forEach((b) => b.classList.remove("is-active"));
+        button.classList.add("is-active");
+
+        const target = button.dataset.schoolFilter;
+        regions.forEach((region) => {
+          const match = target === "all" || region.dataset.schoolRegion === target;
+          region.classList.toggle("is-hidden", !match);
         });
-        content.addEventListener("transitionend", function handle(e) {
-          if (
-            e.propertyName === "height" &&
-            trigger.classList.contains("is-active")
-          ) {
-            content.style.height = "auto";
-          }
-          content.removeEventListener("transitionend", handle);
-        });
-      }
+      });
     });
   });
 });
 
 // 選ばれる理由
 (function () {
-  const track = document.getElementById("track");
+  const track = document.querySelector(".js-feature-track");
+  if (!track) return;
 
   // カードはindex.htmlに直書き。無限スクロールの錯覚を出すため、
   // 元のカード（1セット分）をそのまま複製してもう2セット追加する。
@@ -188,7 +205,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
   window.addEventListener("load", measure);
   window.addEventListener("resize", () => {
-    const ratio = track.scrollLeft / (setWidth || 1);
     measure();
     track.scrollLeft = setWidth; // re-center after resize
   });
@@ -206,7 +222,7 @@ document.addEventListener("DOMContentLoaded", function () {
   track.addEventListener("pointerdown", (e) => {
     isDown = true;
     moved = false;
-    track.classList.add("dragging");
+    track.classList.add("is-dragging");
     startX = e.clientX;
     startScroll = track.scrollLeft;
     track.setPointerCapture(e.pointerId);
@@ -222,7 +238,7 @@ document.addEventListener("DOMContentLoaded", function () {
   function endDrag(e) {
     if (!isDown) return;
     isDown = false;
-    track.classList.remove("dragging");
+    track.classList.remove("is-dragging");
     normalize();
   }
   track.addEventListener("pointerup", endDrag);
@@ -249,11 +265,8 @@ document.addEventListener("DOMContentLoaded", function () {
     clearTimeout(step._t);
     step._t = setTimeout(normalize, 420);
   }
-  document.getElementById("prevBtn").addEventListener("click", () => step(-1));
-  document.getElementById("nextBtn").addEventListener("click", () => step(1));
-
-  // ---- scroll to top ----
-  document.getElementById("scrollTop").addEventListener("click", () => {
-    window.scrollTo({ top: 0, behavior: "smooth" });
-  });
+  const prevBtn = document.querySelector(".js-feature-prev");
+  const nextBtn = document.querySelector(".js-feature-next");
+  if (prevBtn) prevBtn.addEventListener("click", () => step(-1));
+  if (nextBtn) nextBtn.addEventListener("click", () => step(1));
 })();

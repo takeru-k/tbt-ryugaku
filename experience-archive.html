@@ -1,1 +1,634 @@
-留学体験談一覧
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>留学体験談一覧 | 留学エージェントTBT</title>
+
+    <meta
+      name="description"
+      content="TBTを通じて留学した先輩たちの体験談をご紹介します。国や目的別にリアルな声をチェックできます。"
+    />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <header class="c-header">
+      <div class="c-header__inner">
+        <p class="c-header__logo">
+          <a href="index.html"
+            ><img src="images/header/logo-header.png" alt="TBT"
+          /></a>
+        </p>
+        <button
+          class="p-hamburger js-hamburger"
+          aria-controls="js-nav"
+          aria-expanded="false"
+        >
+          <span class="p-hamburger__line"></span>
+          <span class="p-hamburger__line"></span>
+          <span class="p-hamburger__line"></span>
+        </button>
+
+        <nav class="c-header__nav js-nav u-hidden-mobile" id="js-nav">
+          <ul class="c-header__menu">
+            <li class="menu-item"><a href="index.html">ホーム</a></li>
+            <li class="menu-item menu-item-has-children">
+              <a href="#">国から探す</a>
+              <ul class="sub-menu p-menu-grid">
+                <li class="p-menu-grid__item usa">
+                  <a href="country/usa.html">
+                    <span class="p-menu-grid__name">アメリカ</span>
+                  </a>
+                </li>
+
+                <li class="p-menu-grid__item canada">
+                  <a href="country/canada.html">
+                    <span class="p-menu-grid__name">カナダ</span>
+                  </a>
+                </li>
+
+                <li class="p-menu-grid__item uk">
+                  <a href="country/uk.html">
+                    <span class="p-menu-grid__name">イギリス</span>
+                  </a>
+                </li>
+
+                <li class="p-menu-grid__item italy">
+                  <a href="country/italy.html">
+                    <span class="p-menu-grid__name">イタリア</span>
+                  </a>
+                </li>
+
+                <li class="p-menu-grid__item germany">
+                  <a href="country/germany.html">
+                    <span class="p-menu-grid__name">ドイツ</span>
+                  </a>
+                </li>
+
+                <li class="p-menu-grid__item australia">
+                  <a href="country/australia.html">
+                    <span class="p-menu-grid__name">オーストラリア</span>
+                  </a>
+                </li>
+
+                <li class="p-menu-grid__item nz">
+                  <a href="country/nz.html">
+                    <span class="p-menu-grid__name">ニュージーランド</span>
+                  </a>
+                </li>
+
+                <li class="p-menu-grid__item korea">
+                  <a href="country/korea.html">
+                    <span class="p-menu-grid__name">韓国</span>
+                  </a>
+                </li>
+
+                <li class="p-menu-grid__item malaysia">
+                  <a href="country/malaysia.html">
+                    <span class="p-menu-grid__name">マレーシア</span>
+                  </a>
+                </li>
+
+                <li class="p-menu-grid__item uae">
+                  <a href="country/uae.html">
+                    <span class="p-menu-grid__name">UAE</span>
+                  </a>
+                </li>
+              </ul>
+            </li>
+            <li class="menu-item menu-item-has-children">
+              <a href="#">目的から探す</a>
+              <ul class="sub-menu p-menu-grid">
+                <li class="p-menu-grid__item usa">
+                  <a href="purpose/junior-short.html">
+                    <span class="p-menu-grid__name"
+                      >ジュニア向け短期語学留学</span
+                    >
+                  </a>
+                </li>
+
+                <li class="p-menu-grid__item canada">
+                  <a href="purpose/highschool-regular.html">
+                    <span class="p-menu-grid__name"
+                      >現地の高校への正規留学</span
+                    >
+                  </a>
+                </li>
+
+                <li class="p-menu-grid__item italy">
+                  <a href="purpose/university-short.html">
+                    <span class="p-menu-grid__name">大学生の短期語学留学</span>
+                  </a>
+                </li>
+
+                <li class="p-menu-grid__item uk">
+                  <a href="purpose/college.html">
+                    <span class="p-menu-grid__name">カレッジ（専門）留学</span>
+                  </a>
+                </li>
+
+                <li class="p-menu-grid__item germany">
+                  <a href="purpose/university-regular.html">
+                    <span class="p-menu-grid__name">大学正規留学</span>
+                  </a>
+                </li>
+
+                <li class="p-menu-grid__item australia">
+                  <a href="purpose/grad-school.html">
+                    <span class="p-menu-grid__name">大学院留学</span>
+                  </a>
+                </li>
+
+                <li class="p-menu-grid__item nz">
+                  <a href="purpose/parent-child.html">
+                    <span class="p-menu-grid__name">親子留学</span>
+                  </a>
+                </li>
+
+                <li class="p-menu-grid__item korea">
+                  <a href="purpose/senior.html">
+                    <span class="p-menu-grid__name">シニア留学</span>
+                  </a>
+                </li>
+
+                <li class="p-menu-grid__item malaysia">
+                  <a href="purpose/working-holiday.html">
+                    <span class="p-menu-grid__name">ワーキングホリデー</span>
+                  </a>
+                </li>
+
+                <li class="p-menu-grid__item uae">
+                  <a href="purpose/adult.html">
+                    <span class="p-menu-grid__name">社会人の語学留学</span>
+                  </a>
+                </li>
+              </ul>
+            </li>
+
+            <li class="menu-item">
+              <a href="index.html#feature">選ばれる理由</a>
+            </li>
+            <li class="menu-item">
+              <a href="experience-archive.html">留学体験談</a>
+            </li>
+            <li class="menu-item">
+              <a href="news-archive.html">最新情報</a>
+            </li>
+            <li class="menu-item"><a href="https://three-blue-trees.com/company/" target="_blank" rel="noopener noreferrer">運営会社</a></li>
+            <li class="menu-item u-hidden-pc">
+              <a href="contact.html">お問い合わせ</a>
+            </li>
+          </ul>
+        </nav>
+
+        <div class="c-header__contact u-hidden-mobile">
+          <a href="contact.html" class="c-button c-button--gradation">
+            <span class="c-button__text">お問い合わせ</span>
+            <span class="c-button__icon">
+              <img src="images/common/arrow-circle-white.svg" alt="" />
+            </span>
+          </a>
+        </div>
+      </div>
+    </header>
+    <main>
+      <section class="p-page-header">
+        <div class="l-inner">
+          <div class="p-page-header__content">
+            <div class="p-page-header__head">
+              <h1 class="p-page-header__main-title">留学体験談</h1>
+              <span class="p-page-header__sub-title">Experience</span>
+            </div>
+            <p class="p-page-header__lead">
+              TBTを通じて留学した先輩たちの体験談をご紹介します。
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <div class="l-container">
+        <div class="l-inner">
+          <div class="p-post">
+            <div class="p-experience-main">
+              <ul class="p-experience-grid">
+                <li class="p-experience-grid__item">
+                  <a href="experience-single.html" class="c-media-card">
+                    <div class="c-media-card__img">
+                      <img src="images/sample.webp" alt="" />
+                    </div>
+                    <div class="c-media-card__body">
+                      <h3 class="c-media-card__title">
+                        現地の学生と対等に議論できるまでに
+                      </h3>
+                      <ul class="c-tag-list">
+                        <li class="c-tag-list__item">#アメリカ</li>
+                        <li class="c-tag-list__item">#大学院留学</li>
+                      </ul>
+                    </div>
+                  </a>
+                </li>
+                <li class="p-experience-grid__item">
+                  <a href="experience-single.html" class="c-media-card">
+                    <div class="c-media-card__img">
+                      <img src="images/sample.webp" alt="" />
+                    </div>
+                    <div class="c-media-card__body">
+                      <h3 class="c-media-card__title">
+                        未経験からカフェの仕事を通じて英語力アップ
+                      </h3>
+                      <ul class="c-tag-list">
+                        <li class="c-tag-list__item">#カナダ</li>
+                        <li class="c-tag-list__item">#ワーキングホリデー</li>
+                      </ul>
+                    </div>
+                  </a>
+                </li>
+                <li class="p-experience-grid__item">
+                  <a href="experience-single.html" class="c-media-card">
+                    <div class="c-media-card__img">
+                      <img src="images/sample.webp" alt="" />
+                    </div>
+                    <div class="c-media-card__body">
+                      <h3 class="c-media-card__title">
+                        憧れの教育制度で学んだ4年間
+                      </h3>
+                      <ul class="c-tag-list">
+                        <li class="c-tag-list__item">#イギリス</li>
+                        <li class="c-tag-list__item">#大学正規留学</li>
+                      </ul>
+                    </div>
+                  </a>
+                </li>
+                <li class="p-experience-grid__item">
+                  <a href="experience-single.html" class="c-media-card">
+                    <div class="c-media-card__img">
+                      <img src="images/sample.webp" alt="" />
+                    </div>
+                    <div class="c-media-card__body">
+                      <h3 class="c-media-card__title">
+                        母子で挑戦した3週間のホームステイ
+                      </h3>
+                      <ul class="c-tag-list">
+                        <li class="c-tag-list__item">#オーストラリア</li>
+                        <li class="c-tag-list__item">#親子留学</li>
+                      </ul>
+                    </div>
+                  </a>
+                </li>
+                <li class="p-experience-grid__item">
+                  <a href="experience-single.html" class="c-media-card">
+                    <div class="c-media-card__img">
+                      <img src="images/sample.webp" alt="" />
+                    </div>
+                    <div class="c-media-card__body">
+                      <h3 class="c-media-card__title">
+                        60代からの新しい学び直し
+                      </h3>
+                      <ul class="c-tag-list">
+                        <li class="c-tag-list__item">#ニュージーランド</li>
+                        <li class="c-tag-list__item">#シニア留学</li>
+                      </ul>
+                    </div>
+                  </a>
+                </li>
+                <li class="p-experience-grid__item">
+                  <a href="experience-single.html" class="c-media-card">
+                    <div class="c-media-card__img">
+                      <img src="images/sample.webp" alt="" />
+                    </div>
+                    <div class="c-media-card__body">
+                      <h3 class="c-media-card__title">
+                        語学力ゼロから始めた現地校生活
+                      </h3>
+                      <ul class="c-tag-list">
+                        <li class="c-tag-list__item">#韓国</li>
+                        <li class="c-tag-list__item">#高校留学</li>
+                      </ul>
+                    </div>
+                  </a>
+                </li>
+                <li class="p-experience-grid__item">
+                  <a href="experience-single.html" class="c-media-card">
+                    <div class="c-media-card__img">
+                      <img src="images/sample.webp" alt="" />
+                    </div>
+                    <div class="c-media-card__body">
+                      <h3 class="c-media-card__title">
+                        働きながら学んだ英語との向き合い方
+                      </h3>
+                      <ul class="c-tag-list">
+                        <li class="c-tag-list__item">#マレーシア</li>
+                        <li class="c-tag-list__item">#社会人留学</li>
+                      </ul>
+                    </div>
+                  </a>
+                </li>
+                <li class="p-experience-grid__item">
+                  <a href="experience-single.html" class="c-media-card">
+                    <div class="c-media-card__img">
+                      <img src="images/sample.webp" alt="" />
+                    </div>
+                    <div class="c-media-card__body">
+                      <h3 class="c-media-card__title">
+                        研究テーマを深めるための1年間
+                      </h3>
+                      <ul class="c-tag-list">
+                        <li class="c-tag-list__item">#ドイツ</li>
+                        <li class="c-tag-list__item">#大学院留学</li>
+                      </ul>
+                    </div>
+                  </a>
+                </li>
+                <li class="p-experience-grid__item">
+                  <a href="experience-single.html" class="c-media-card">
+                    <div class="c-media-card__img">
+                      <img src="images/sample.webp" alt="" />
+                    </div>
+                    <div class="c-media-card__body">
+                      <h3 class="c-media-card__title">
+                        初めての海外で得た自信
+                      </h3>
+                      <ul class="c-tag-list">
+                        <li class="c-tag-list__item">#UAE</li>
+                        <li class="c-tag-list__item">#ジュニア短期留学</li>
+                      </ul>
+                    </div>
+                  </a>
+                </li>
+              </ul>
+
+              <nav class="c-pagination" aria-label="ページネーション">
+                <a href="#" class="c-pagination__link is-current">1</a>
+                <a href="#" class="c-pagination__link">2</a>
+                <a href="#" class="c-pagination__link">3</a>
+                <a href="#" class="c-pagination__link">›</a>
+              </nav>
+            </div>
+            <!-- /.p-experience-main -->
+
+            <aside class="p-sidebar">
+              <div class="p-widget p-widget--banner">
+                <h2 class="p-widget__title">留学のご相談はTBTへ</h2>
+                <p class="p-widget__lead">
+                  体験談を読んで気になることがあれば、お気軽にご相談ください。オンラインで全国どこからでも対応いたします。
+                </p>
+
+                <a href="contact.html" class="c-button c-button--small"
+                  ><span class="c-button__text">まずは相談する</span>
+                  <span class="c-button__icon">
+                    <img src="images/common/arrow.svg" alt="" /> </span
+                ></a>
+              </div>
+              <!-- /.p-widget--banner -->
+
+              <div class="p-widget p-widget--category">
+                <h2 class="p-widget__title">国から探す</h2>
+                <ul class="p-widget__category-list">
+                  <li>
+                    <a href="experience-archive.html"
+                      ><span>アメリカ</span
+                      ><span class="p-widget__category-count">（3）</span></a
+                    >
+                  </li>
+                  <li>
+                    <a href="experience-archive.html"
+                      ><span>カナダ</span
+                      ><span class="p-widget__category-count">（2）</span></a
+                    >
+                  </li>
+                  <li>
+                    <a href="experience-archive.html"
+                      ><span>イギリス</span
+                      ><span class="p-widget__category-count">（2）</span></a
+                    >
+                  </li>
+                  <li>
+                    <a href="experience-archive.html"
+                      ><span>オーストラリア</span
+                      ><span class="p-widget__category-count">（2）</span></a
+                    >
+                  </li>
+                  <li>
+                    <a href="experience-archive.html"
+                      ><span>その他の国</span
+                      ><span class="p-widget__category-count">（3）</span></a
+                    >
+                  </li>
+                </ul>
+              </div>
+              <!-- /.p-widget--category -->
+
+              <div class="p-widget p-widget--category">
+                <h2 class="p-widget__title">目的から探す</h2>
+                <ul class="p-widget__category-list">
+                  <li>
+                    <a href="experience-archive.html"
+                      ><span>ジュニア向け短期語学留学</span
+                      ><span class="p-widget__category-count">（3）</span></a
+                    >
+                  </li>
+                  <li>
+                    <a href="experience-archive.html"
+                      ><span>高校正規留学</span
+                      ><span class="p-widget__category-count">（2）</span></a
+                    >
+                  </li>
+                  <li>
+                    <a href="experience-archive.html"
+                      ><span>大学正規留学</span
+                      ><span class="p-widget__category-count">（2）</span></a
+                    >
+                  </li>
+                  <li>
+                    <a href="experience-archive.html"
+                      ><span>親子留学</span
+                      ><span class="p-widget__category-count">（2）</span></a
+                    >
+                  </li>
+                  <li>
+                    <a href="experience-archive.html"
+                      ><span>ワーキングホリデー</span
+                      ><span class="p-widget__category-count">（3）</span></a
+                    >
+                  </li>
+                </ul>
+              </div>
+              <!-- /.p-widget--category -->
+
+              <div class="p-widget p-widget--ranking">
+                <h2 class="p-widget__title">よく読まれている体験談</h2>
+                <ol class="p-widget__ranking-list">
+                  <li>
+                    <span class="p-widget__ranking-num">1</span>
+                    <a href="experience-single.html"
+                      >現地の学生と対等に議論できるまでに</a
+                    >
+                  </li>
+                  <li>
+                    <span class="p-widget__ranking-num">2</span>
+                    <a href="experience-single.html"
+                      >未経験からカフェの仕事を通じて英語力アップ</a
+                    >
+                  </li>
+                  <li>
+                    <span class="p-widget__ranking-num">3</span>
+                    <a href="experience-single.html"
+                      >憧れの教育制度で学んだ4年間</a
+                    >
+                  </li>
+                  <li>
+                    <span class="p-widget__ranking-num">4</span>
+                    <a href="experience-single.html"
+                      >母子で挑戦した3週間のホームステイ</a
+                    >
+                  </li>
+                  <li>
+                    <span class="p-widget__ranking-num">5</span>
+                    <a href="experience-single.html"
+                      >60代からの新しい学び直し</a
+                    >
+                  </li>
+                </ol>
+              </div>
+              <!-- /.p-widget--ranking -->
+            </aside>
+            <!-- /.p-sidebar -->
+          </div>
+          <!-- /.p-post -->
+        </div>
+        <!-- /.l-inner -->
+      </div>
+      <!-- /.l-container -->
+
+      <section class="l-block p-cta">
+        <div class="l-inner">
+          <div class="p-cta__box">
+            <div class="p-cta__content">
+              <p class="p-cta__label">contact</p>
+              <h2 class="p-cta__heading">
+                全国どこからでも、<br />同じ品質でサポートします。
+              </h2>
+              <div class="p-cta__text">
+                <p>オンラインで全国どこからのご依頼でも対応いたします。</p>
+                <p>
+                  無料相談では現地のリアルな最新情報や具体的な費用のことまでお伝えできます。<br />比較検討のファーストステップとして、ぜひお気軽にお問い合わせください。
+                </p>
+              </div>
+            </div>
+            <a href="contact.html" class="c-button c-button__white">
+              <span class="c-button__text">まずは相談する</span>
+              <span class="c-button__icon c-button__icon--sm">
+                <img src="images/common/arrow.svg" alt="" />
+              </span>
+            </a>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer class="l-footer">
+      <div class="l-footer__inner">
+        <div class="l-footer__main">
+          <div class="l-footer__info">
+            <p class="l-footer__logo">
+              <img
+                src="images/header/logo-header.png"
+                alt="留学エージェントTBT"
+              />
+            </p>
+
+            <address class="l-footer__address">
+              〒025-0092<br />
+              岩手県花巻市大通り１丁目３−５<br />
+              花巻市ビジネスインキュベータ1階
+            </address>
+          </div>
+
+          <nav class="l-footer__main-nav">
+            <div class="l-footer__nav-group">
+              <p class="l-footer__nav-title">目的から探す</p>
+              <ul class="l-footer__nav-sub">
+                <li>
+                  <a href="purpose/junior-short.html"
+                    >ジュニア向け短期語学留学</a
+                  >
+                </li>
+                <li>
+                  <a href="purpose/highschool-regular.html"
+                    >現地の高校への正規留学</a
+                  >
+                </li>
+                <li>
+                  <a href="purpose/university-short.html"
+                    >大学生の短期語学留学</a
+                  >
+                </li>
+                <li><a href="purpose/college.html">カレッジ（専門）留学</a></li>
+                <li>
+                  <a href="purpose/university-regular.html">大学正規留学</a>
+                </li>
+                <li><a href="purpose/grad-school.html">大学院留学</a></li>
+                <li><a href="purpose/parent-child.html">親子留学</a></li>
+                <li><a href="purpose/senior.html">シニア留学</a></li>
+                <li>
+                  <a href="purpose/working-holiday.html">ワーキングホリデー</a>
+                </li>
+                <li><a href="purpose/adult.html">社会人の語学留学</a></li>
+              </ul>
+            </div>
+            <div class="l-footer__nav-group">
+              <p class="l-footer__nav-title">国から探す</p>
+              <ul class="l-footer__nav-sub">
+                <li><a href="country/usa.html">アメリカ</a></li>
+                <li><a href="country/canada.html">カナダ</a></li>
+                <li><a href="country/uk.html">イギリス</a></li>
+                <li><a href="country/italy.html">イタリア</a></li>
+                <li><a href="country/germany.html">ドイツ</a></li>
+                <li><a href="country/australia.html">オーストラリア</a></li>
+                <li><a href="country/nz.html">ニュージーランド</a></li>
+                <li><a href="country/korea.html">韓国</a></li>
+                <li><a href="country/malaysia.html">マレーシア</a></li>
+                <li><a href="country/uae.html">UAE</a></li>
+              </ul>
+            </div>
+
+            <div class="l-footer__nav-group l-footer__nav-group--plain">
+              <ul class="l-footer__nav-sub">
+                <li><a href="index.html">ホーム</a></li>
+                <li><a href="index.html#feature">初めての方へ</a></li>
+                <li><a href="support.html">サポート内容</a></li>
+                <li><a href="school.html">提携校一覧</a></li>
+                <li><a href="experience-archive.html">留学体験談</a></li>
+                <li><a href="news-archive.html">最新情報</a></li>
+                <li><a href="contact.html">お問い合わせ</a></li>
+                <li><a href="privacy-policy.html">個人情報保護方針</a></li>
+                <li>
+                  <a
+                    href="https://three-blue-trees.com/company/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                   
+                    >運営会社</a
+                  >
+                </li>
+              </ul>
+            </div>
+          </nav>
+        </div>
+
+        <div class="l-footer__bottom">
+          <small class="l-footer__copy">&copy; Three Blue Trees, inc.</small>
+        </div>
+      </div>
+    </footer>
+    <script src="js/main.js"></script>
+  </body>
+</html>
