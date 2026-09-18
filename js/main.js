@@ -101,6 +101,12 @@ document.addEventListener("DOMContentLoaded", function () {
     if (list) wrap.appendChild(list.cloneNode(true));
   });
 
+  // p-hero__collage（モバイル自動スクロール）の無限ループ用クローン
+  document.querySelectorAll(".js-hero-collage-track").forEach((track) => {
+    const collage = track.querySelector(".p-hero__collage");
+    if (collage) track.appendChild(collage.cloneNode(true));
+  });
+
   // p-card-list の横スクロール用バー（iOS Safariは::-webkit-scrollbar非対応のため自前で描画）
   document.querySelectorAll(".js-card-list-scrollbar").forEach((bar) => {
     const items = bar
