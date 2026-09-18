@@ -736,7 +736,7 @@ li {
   .menu-item-has-children .p-menu-grid {
     display: none;
     position: absolute;
-    top: 100%;
+    top: 80%;
     left: 50%;
     transform: translateX(-50%);
     width: auto;
@@ -748,11 +748,16 @@ li {
     grid-template-columns: repeat(4, 200px);
     gap: 30px 20px;
     border-radius: 6px;
-    visibility: visible;
     overflow: visible;
+    visibility: visible;
   }
 
+  /* JS(is-hover-open)がliとメニュー間の隙間移動中のチラつきをなくす
+     猶予処理を担当する。ただしJSが読み込まれない/効かない場合でも
+     メニュー自体は最低限開閉できるよう、素の:hoverもフォールバックとして
+     残しておく */
   .menu-item-has-children.is-open > .p-menu-grid,
+  .menu-item-has-children.is-hover-open > .p-menu-grid,
   .menu-item-has-children:hover > .p-menu-grid {
     display: grid;
   }
@@ -800,7 +805,6 @@ li {
     display: block;
     font-size: 15px;
     font-weight: bold;
-    color: var(--color-main);
     width: 100%;
     text-align: center;
     position: relative;
@@ -816,7 +820,7 @@ li {
 
 /* PCのみ：メニューホバー時に擬似要素で背景を暗くする */
 @media (min-width: 1024px) {
-  body:has(.menu-item-has-children:hover)::after {
+  body:has(.menu-item-has-children.is-hover-open, .menu-item-has-children:hover)::after {
     content: "";
     position: fixed;
     inset: 0;

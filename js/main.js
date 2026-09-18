@@ -52,6 +52,34 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   });
 
+  // PC：メガメニューのホバー制御（liとメニューの間の隙間を移動する間は
+  // 消えず、実際に離れた時だけ短い猶予後に閉じる。閉じるタイミングを
+  // JS側で一元管理することで、liとメニュー間の遷移中に一瞬消えたり、
+  // 背景の暗転フィルターだけ先に消えたりするチラつきを防ぐ）
+  document.querySelectorAll(".menu-item-has-children").forEach((li) => {
+    const menu = li.querySelector(".p-menu-grid");
+    if (!menu) return;
+
+    let closeTimer = null;
+
+    const open = () => {
+      clearTimeout(closeTimer);
+      li.classList.add("is-hover-open");
+    };
+
+    const scheduleClose = () => {
+      clearTimeout(closeTimer);
+      closeTimer = setTimeout(() => {
+        li.classList.remove("is-hover-open");
+      }, 150);
+    };
+
+    li.addEventListener("mouseenter", open);
+    li.addEventListener("mouseleave", scheduleClose);
+    menu.addEventListener("mouseenter", open);
+    menu.addEventListener("mouseleave", scheduleClose);
+  });
+
   // 実績スライダー：矢印ボタンでスクロール
   // 手動スクロールされていてもズレないよう、クリックのたびに実際の
   // scrollLeftから「今どのカードに一番近いか」を判定してから1枚分移動する。
