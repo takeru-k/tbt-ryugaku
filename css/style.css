@@ -170,6 +170,7 @@ li {
 
 :where(img) {
   object-fit: cover;
+  border-radius: 8px;
 }
 
 /*-------------------------
@@ -825,7 +826,10 @@ li {
 
 /* PCのみ：メニューホバー時に擬似要素で背景を暗くする */
 @media (min-width: 1024px) {
-  body:has(.menu-item-has-children.is-hover-open, .menu-item-has-children:hover)::after {
+  body:has(
+      .menu-item-has-children.is-hover-open,
+      .menu-item-has-children:hover
+    )::after {
     content: "";
     position: fixed;
     inset: 0;
@@ -879,12 +883,7 @@ li {
 }
 
 .p-hero__title span {
-  background-image: var(--gradient);
-  background-size: 300% 300%;
-  background-position: 100% 100%;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
+  color: var(--color-main-light);
 }
 
 /* 既存の.p-slideshowは非表示（p-hero__imageに統一） */
@@ -1251,6 +1250,7 @@ li {
   position: relative;
   width: 100%;
   overflow: hidden;
+  border-radius: 8px;
   z-index: 0;
   /* aspect-ratio非対応ブラウザ（iOS 14以前など）向けのフォールバック。
      absoluteな子要素だけで高さを作っているため、これが無いとカードごと高さ0になって消える */
