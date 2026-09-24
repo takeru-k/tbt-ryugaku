@@ -134,15 +134,16 @@ li {
   --color-link: #d0607f;
   --gradient: radial-gradient(
     circle at center,
-    #ffc4d3 0%,
-    #ec8aaa 60%,
-    #9ed8ec 120%
+    #ffc2d4 0%,
+    #f395b4 55%,
+    #9bdcf2 115%
   );
   --linear-gradient: linear-gradient(
     135deg,
-    #f5a3bc 0%,
-    #e47c9c 55%,
-    #8fd1e8 130%
+    #fbb6ca 0%,
+    #f39ab7 45%,
+    #f7bdd1 75%,
+    #aee2f4 115%
   );
   --font-base:
     "Zen Maru Gothic", "ヒラギノ丸ゴ ProN", "Hiragino Maru Gothic ProN",
@@ -1681,6 +1682,7 @@ li {
   gap: 32px;
   color: #fff;
   background: var(--linear-gradient);
+  text-shadow: 0 1px 8px rgba(205, 85, 125, 0.45);
 }
 
 .p-cta__heading {
@@ -2052,6 +2054,7 @@ li {
   color: #fff;
   padding: 4px 20px;
   background: var(--linear-gradient);
+  text-shadow: 0 1px 4px rgba(205, 85, 125, 0.5);
   font-family: var(--font-english);
   font-size: 12px;
   font-weight: bold;
@@ -2174,6 +2177,7 @@ li {
   border-radius: 16px;
   background: var(--linear-gradient);
   padding: 36px 28px;
+  text-shadow: 0 1px 8px rgba(205, 85, 125, 0.45);
   display: flex;
   flex-direction: column;
   justify-content: space-between;
