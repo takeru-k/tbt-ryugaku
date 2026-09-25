@@ -123,13 +123,7 @@ document.addEventListener("DOMContentLoaded", function () {
     next.addEventListener("click", () => goTo(getNearestIndex() + 1));
   });
 
-  // スライドショーの無限ループ用クローン（全インスタンス対応）
-  document.querySelectorAll(".p-slideshow__wrap").forEach((wrap) => {
-    const list = wrap.querySelector(".p-slideshow__list");
-    if (list) wrap.appendChild(list.cloneNode(true));
-  });
-
-  // p-hero__collage（モバイル自動スクロール）の無限ループ用クローン
+  // p-hero__collage（自動スクロール）の無限ループ用クローン
   document.querySelectorAll(".js-hero-collage-track").forEach((track) => {
     const collage = track.querySelector(".p-hero__collage");
     if (collage) track.appendChild(collage.cloneNode(true));
