@@ -142,8 +142,7 @@ li {
     135deg,
     #fbb6ca 0%,
     #f39ab7 45%,
-    #f7bdd1 75%,
-    #aee2f4 115%
+    #f7bdd1 100%
   );
   --font-base:
     "Zen Maru Gothic", "ヒラギノ丸ゴ ProN", "Hiragino Maru Gothic ProN",
@@ -1676,7 +1675,7 @@ li {
   flex-direction: column;
   gap: 32px;
   color: #fff;
-  background: linear-gradient(135deg, #fbb6ca 0%, #f39ab7 45%, #f7bdd1 100%);
+  background: var(--linear-gradient);
 }
 
 .p-cta__heading {
@@ -2046,7 +2045,7 @@ li {
   color: #fff;
   padding: 4px 20px;
   background: var(--linear-gradient);
-  text-shadow: 0 1px 4px rgba(205, 85, 125, 0.5);
+
   font-family: var(--font-english);
   font-size: 12px;
   letter-spacing: 0.1em;
@@ -2082,7 +2081,7 @@ li {
 }
 
 .p-media-item__text strong {
-  background: linear-gradient(transparent 60%, var(--color-accent-pink) 60%);
+  background: linear-gradient(transparent 60%, var(--color-accent) 60%);
   display: inline;
 }
 
@@ -2415,7 +2414,7 @@ li {
 
 .c-accordion__label {
   flex: 1;
-  font-size: clamp(1rem, 0.955rem + 0.23vw, 1.125rem) /* 16-18px */;
+
   color: var(--color-text);
   line-height: 1.5;
 }
