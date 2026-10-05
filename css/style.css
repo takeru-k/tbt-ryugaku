@@ -2680,6 +2680,17 @@ li {
   }
 }
 
+.l-container--light {
+  padding-bottom: 32px;
+  background-color: var(--color-bg-light);
+}
+
+@media (min-width: 1024px) {
+  .l-container--light {
+    padding-bottom: 64px;
+  }
+}
+
 /*================================
 	ブログ詳細
 =================================*/
@@ -2719,6 +2730,17 @@ li {
   width: 100%;
   min-width: 0;
   background-color: var(--color-white);
+}
+
+.p-post__main--padded {
+  padding: 16px;
+  border-radius: var(--radius-md);
+}
+
+@media (min-width: 1024px) {
+  .p-post__main--padded {
+    padding: 24px;
+  }
 }
 
 /* 留学体験談アーカイブページ専用メインカラム */
@@ -2949,6 +2971,10 @@ li {
   border: var(--border-base);
   border-radius: var(--radius-md);
   padding: 24px;
+}
+
+.p-sidebar--plain .p-widget {
+  border: none;
 }
 
 .p-widget__title {
