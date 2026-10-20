@@ -1854,7 +1854,7 @@ li {
 
 .p-page-header__sub-title {
   display: block;
-  font-size: var(--font-size-fluid-sm)/* 14-16px */;
+  font-size: var(--font-size-fluid-sm) /* 14-16px */;
   font-weight: 500;
   color: var(--color-main);
   margin-top: 10px;
@@ -2363,7 +2363,7 @@ li {
   flex-shrink: 0;
   width: 20px;
   font-weight: bold;
-  font-size: var(--font-size-fluid-md)/* 16-18px */;
+  font-size: var(--font-size-fluid-md) /* 16-18px */;
 }
 
 .c-accordion__icon--q {
@@ -3368,9 +3368,15 @@ li {
 }
 
 .p-contact-form__select {
-  appearance: auto;
-  -webkit-appearance: auto;
-  -moz-appearance: auto;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  padding-right: 48px;
+  padding-left: 20px;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='7' viewBox='0 0 12 7' fill='none' stroke='%235e4b52' stroke-width='1.25' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M1 1l5 5 5-5'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 20px center;
+  background-size: 12px 7px;
 }
 
 .p-contact-form__input:focus,
